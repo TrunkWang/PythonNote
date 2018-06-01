@@ -93,8 +93,7 @@ print suumer.val
 del suumer.negv
 
 
-
-
+#以上是練習代碼
 
 
 
