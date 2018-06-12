@@ -55,3 +55,9 @@ z = [y,(x,y)]
 objgraph.show_refs([z],filename='ref_topo.png')
 
 
+import gc
+print gc.get_threshold()
+
+gc.collect()
+
+print getrefcount(b)
