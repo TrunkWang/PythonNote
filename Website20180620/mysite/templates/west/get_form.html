@@ -1,0 +1,16 @@
+{% extends "templay_body.html" %}
+
+{% block mainbody %}
+
+{% if ht_action == 'showform' %}
+<p>
+<form action= '/west/investigate_get/' method='get'>
+<input type='text' name='staffs'>
+<input type='submit' value='Submit'>
+</form>
+</p>
+{% else %}
+<p>this is show value:{{ staffs }}</p>
+{% endif %}
+
+{% endblock %}

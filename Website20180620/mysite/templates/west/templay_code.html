@@ -1,0 +1,15 @@
+<h1>{{ label }}</h1>
+
+
+{% for item in staffs %}
+<p>[{{ item.id }}]:{{ item }}</p>
+{% endfor %}
+
+
+<h1>{{ label2 }}</h1>
+
+{% if numberage > 80 %}
+<p>This age is uder 80 !</p>
+{% else %}
+<p>This age is upper 80!</p>
+{% endif %}
