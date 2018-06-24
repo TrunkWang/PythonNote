@@ -1,0 +1,20 @@
+{% extends "templay_body.html" %}
+
+{% block mainbody %}
+
+<form role = 'form' action = '/west/login/' method = 'post'>
+{% csrf_token %}
+<label>Username</label>
+<input type = 'text' name = 'username'>
+<label>Password</label>
+<input name ='password' type = 'password'>
+<input type = 'submit' value = 'login'>
+
+</form>
+
+<form role = 'form' action = '/west/logout/' method = 'post'>
+{% csrf_token %}
+<input type = 'submit' value = 'logout'>
+</form>
+
+{% endblock %}

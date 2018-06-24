@@ -3,10 +3,12 @@
 
 
 from django.conf.urls import include,url
+from django.contrib import admin
 from west import views
 
 
 urlpatterns = [
+	url(r'^admin/',admin.site.urls),
 	url(r'^$',views.first_page),
 	url(r'^staff/',views.staff),
 	url(r'^templay/',views.templay),
@@ -16,6 +18,10 @@ urlpatterns = [
 	url(r'^get_form/',views.get_form),
 	url(r'^investigate_get/',views.investigate_get),
 	url(r'^post_form/',views.post_form),
+	url(r'^post_db/',views.post_db),
+	url(r'^login/',views.login),
+	url(r'^logout/',views.logout),
+	
 
 ]
 

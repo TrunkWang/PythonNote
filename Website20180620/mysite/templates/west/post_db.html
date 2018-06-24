@@ -1,0 +1,30 @@
+{% extends "templay_body.html" %}
+
+{% block mainbody %}
+
+{% if ht_action == 'showform' %}
+<p>
+<form action= '/west/post_db/' method='post'>
+{% csrf_token %}
+<input type='text' name='staffs'>
+<input type='submit' value='Submit'>
+</form>
+</p>
+<p>
+<form action= '/west/post_db/' method='post'>
+{% csrf_token %}
+{{ pythonform.as_p }}
+<input type='submit' value='Submit'>
+</form>
+</p>
+{% endif %}
+
+<table border = '1'>
+<tr><th>index</th><th>name</th></tr>
+{% for item in staffs %}
+<tr><td>{{ item.id }}</td><td><div align="center"><form action= '/west/post_db/' method='post'>{% csrf_token %}<input type='submit' name='staffs' value='{{ item }}'></form></div></td></tr>
+{% endfor %}
+</table>
+
+
+{% endblock %}
